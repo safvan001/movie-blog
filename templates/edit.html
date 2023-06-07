@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<center>
+<h1>Edit Movies</h1>
+<form method="POST" enctype="multipart/form-data">
+ {% csrf_token %}
+ <table>
+{{form.as_table}}
+ </table>
+<input type="submit">
+</form>
+{% endblock %}
+</center>

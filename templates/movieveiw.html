@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mx-auto mt-4">
+  <div class="row">
+      <center>
+      {% csrf_token %}
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+  <img src="{{movie.img.url}}" class="card-img-top" alt="..." height="300">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.name}}</h5>
+    <p class="card-text">{{movie.desc}}</p>
+      <a href="{% url 'movieblogger:update' movie.id %}" class="btn btn-primary btn-lg">Edit</a>
+      <a href="{% url 'movieblogger:delete' movie.id %}" class="btn btn-primary btn-lg">Delete</a>
+
+  </div>
+  </div>
+    </div>
+      </center>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+

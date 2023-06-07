@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'CSS/a.css' %}">-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<center>-->
+<!--<h1>ADD MOVIES</h1>-->
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!-- {% csrf_token %}-->
+<!-- <table>-->
+<!--{{movie.as_table}}-->
+<!-- </table>-->
+<!--<input type="submit">-->
+<!--</form>-->
+<!--</center>-->
+
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/a.css' %}">
+
+</head>
+<center>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+</form>
+    </center>
