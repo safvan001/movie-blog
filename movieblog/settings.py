@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['16.170.221.118']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
